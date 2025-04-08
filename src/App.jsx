@@ -14,7 +14,7 @@ function App() {
                     {/*<Route path="/Track2" element={<Track2/>} />*/}
                     <Route path="/About" element={<About/>} />
                     <Route path="/Contact" element={<Contact/>} />
-                    <BrowserRouter basename="https://github.com/rONin01010101010/portfolio"/>
+
                 </Routes>
 
     );
