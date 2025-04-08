@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, BrowserRouter} from 'react-router-dom';
 import Home from './Pages/Home.jsx';
 import Tracklist from './Pages/tracklist.jsx'
 import Project from './Pages/Project.jsx'
@@ -14,6 +14,7 @@ function App() {
                     {/*<Route path="/Track2" element={<Track2/>} />*/}
                     <Route path="/About" element={<About/>} />
                     <Route path="/Contact" element={<Contact/>} />
+                    <BrowserRouter basename="https://github.com/rONin01010101010/portfolio"/>
                 </Routes>
 
     );
