@@ -1,0 +1,1084 @@
+/* About.css - Spotify-inspired styling with circular profile image at top */
+
+.spotify-about-container {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Circular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+/* New Profile Image Container at Top */
+.profile-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    background: linear-gradient(to bottom, #1db954, #121212);
+    position: relative;
+}
+
+.profile-image-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #1db954;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.profile-image-circle:hover {
+    transform: scale(1.05);
+}
+
+.profile-name {
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.spotify-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.spotify-logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.portfolio-link {
+    margin-left: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+.portfolio-link:hover {
+    color: #1db954;
+}
+
+.spotify-profile-button {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.spotify-profile-button:hover {
+    background-color: #333;
+}
+
+.spotify-profile-button span {
+    margin: 0 8px;
+    font-weight: 600;
+}
+
+.spotify-banner {
+    height: 200px;
+    position: relative;
+    background: linear-gradient(90deg, #1db954, #191414);
+    margin-top: -20px;
+}
+
+.banner-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.banner-content {
+    padding: 20px;
+}
+
+.verified-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.verified-badge i {
+    color: #1db954;
+    margin-right: 5px;
+}
+
+.spotify-action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.spotify-play-button {
+    display: flex;
+    align-items: center;
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.spotify-play-button:hover {
+    background-color: #1ed760;
+    transform: scale(1.05);
+}
+
+.spotify-play-button i {
+    margin-right: 8px;
+}
+
+.spotify-icons {
+    display: flex;
+    align-items: center;
+}
+
+.spotify-icons a {
+    color: #b3b3b3;
+    font-size: 20px;
+    margin-left: 20px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.spotify-icons a:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+.spotify-more-button {
+    background: none;
+    border: none;
+    color: #b3b3b3;
+    font-size: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.spotify-more-button:hover {
+    color: white;
+}
+
+.spotify-content {
+    padding: 20px;
+}
+
+.spotify-bio, .spotify-popular {
+    background-color: #181818;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.spotify-bio h2, .spotify-popular h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.spotify-bio p {
+    line-height: 1.6;
+    color: #b3b3b3;
+}
+
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #282828;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.skill-item:hover {
+    background-color: #333;
+}
+
+.skill-number {
+    width: 30px;
+    text-align: center;
+    font-weight: 700;
+    color: #b3b3b3;
+}
+
+.skill-info {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-name {
+    font-weight: 600;
+}
+
+.skill-plays {
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.spotify-navigation {
+    padding: 0 20px;
+    margin-top: 40px;
+}
+
+.spotify-next-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #181818;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 20px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.spotify-next-button:hover {
+    background-color: #333;
+}
+
+/* Modal Gallery Styling */
+.spotify-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spotify-modal {
+    background-color: #282828;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: white;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: #b3b3b3;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: white;
+}
+
+.modal-gallery {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.gallery-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-image {
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 4px;
+}
+
+.image-caption {
+    margin-top: 10px;
+    color: #b3b3b3;
+}
+
+.gallery-arrow {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    position: absolute;
+}
+
+.gallery-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-arrow.left {
+    left: 10px;
+}
+
+.gallery-arrow.right {
+    right: 10px;
+}
+
+.modal-footer {
+    padding: 20px;
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #b3b3b3;
+    font-size: 24px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.social-links a:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .profile-image-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-name {
+        font-size: 28px;
+    }
+
+    .spotify-banner {
+        height: 150px;
+    }
+
+    .skill-item {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-name {
+        font-size: 24px;
+    }
+
+    .spotify-banner {
+        height: 120px;
+    }
+
+    .spotify-action-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .spotify-play-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .spotify-icons {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .spotify-icons a {
+        margin: 0;
+    }
+}
+
+/* Updated style for the Next button */
+.spotify-navigation {
+    padding: 0 20px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end; /* Align button to the right */
+}
+
+.spotify-next-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto; /* Changed from 100% to auto */
+    max-width: 200px; /* Set maximum width */
+    background-color: #181818;
+    border: none;
+    border-radius: 24px; /* Increased border radius for rounded edges */
+    padding: 12px 20px; /* Reduced padding */
+    color: white;
+    font-weight: 600;
+    font-size: 14px; /* Smaller font size */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.spotify-next-button:hover {
+    background-color: #333;
+    transform: scale(1.03); /* Slight scale effect on hover */
+}
+
+.spotify-next-button span {
+    margin-right: 10px;
+}
+
+.spotify-next-button i {
+    font-size: 12px; /* Smaller icon */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+    .spotify-next-button {
+        max-width: 160px;
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
+
+/* Add this to your existing About.css file */
+
+/* Content Boxes Layout */
+.content-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-box {
+    flex: 1;
+    min-width: 300px;
+    background-color: #282828;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.content-box:hover {
+    transform: translateY(-5px);
+}
+
+.box-title {
+    color: #1DB954;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #3E3E3E;
+    padding-bottom: 10px;
+}
+
+/* About Box */
+.about-box {
+    flex: 2;
+}
+
+.about-box p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Education Box */
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.education-item {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #3E3E3E;
+}
+
+.education-item:last-child {
+    border-bottom: none;
+}
+
+.education-year {
+    font-weight: bold;
+    color: #1DB954;
+    min-width: 80px;
+}
+
+.education-details h3 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+}
+
+.education-details p {
+    margin: 0;
+    color: #B3B3B3;
+    font-size: 0.9rem;
+}
+
+/* Skills Box */
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #333333;
+    transition: background-color 0.2s ease;
+}
+
+.skill-item:hover {
+    background-color: #3E3E3E;
+}
+
+.skill-logo {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.skill-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-name {
+    font-weight: bold;
+    color: white;
+}
+
+.skill-level {
+    font-size: 0.8rem;
+    color: #1DB954;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content-boxes {
+        flex-direction: column;
+    }
+
+    .content-box {
+        width: 100%;
+    }
+}
+
+/* Add these styles to your existing About.css file */
+
+/* Current Project Container */
+.current-project-container {
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 20px;
+}
+
+/* Current Project Box */
+.current-project-box {
+    width: 100%;
+    background-color: #282828;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #1DB954;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    margin: 0;
+    color: #fff;
+}
+
+.project-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar {
+    width: 150px;
+    height: 8px;
+    background-color: #3E3E3E;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #1DB954;
+    border-radius: 4px;
+}
+
+.progress-text {
+    font-size: 0.8rem;
+    color: #B3B3B3;
+}
+
+.project-description {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #DADADA;
+}
+
+.project-tech {
+    margin-bottom: 20px;
+}
+
+.project-tech h4 {
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background-color: #333333;
+    color: #1DB954;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #333;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.github-link:hover {
+    background-color: #1DB954;
+}
+
+/* Make sure the current project box displays below other boxes */
+@media (min-width: 769px) {
+    .content-boxes {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .progress-bar {
+        width: 100%;
+    }
+}
+
+/* Menu button and dropdown styles */
+.menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-button {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #1ed760;
+}
+
+.menu-button i {
+    font-size: 18px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #282828;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 10;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-menu li:hover {
+    background-color: #333;
+}
+
+/* Add a subtle arrow pointing to the menu button */
+.dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #282828 transparent;
+}
+
+.navigation-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.nav-button {
+    background-color: #1db954; /* Spotify green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-button:hover {
+    background-color: #1ed760;
+}
+
+.spotify-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spotify-resume-button {
+    margin-left: auto; /* Pushes the button to the right */
+    margin-right: 15px; /* Adds some spacing from the edge */
+}
+
+.resume-link {
+    background-color: #1DB954; /* Spotify green */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.resume-link:hover {
+    background-color: #1ed760;
+    transform: scale(1.05);
+}
+
+/* Skills box scrolling */
+.skill-list-container {
+    max-height: 250px; /* Adjust this height based on your design */
+    overflow-y: auto;
+    scrollbar-width: thin; /* For Firefox */
+    padding-right: 5px; /* Prevents content from touching scrollbar */
+}
+
+/* Custom scrollbar styling for webkit browsers (Chrome, Safari, etc.) */
+.skill-list-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.skill-list-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.skill-list-container::-webkit-scrollbar-thumb {
+    background: #1DB954; /* Spotify green */
+    border-radius: 10px;
+}
+
+.skill-list-container::-webkit-scrollbar-thumb:hover {
+    background: #1ed760;
+}
+
+/* Make sure the skill-list maintains its styling */
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Skills box scrolling */
+.skill-list-container {
+    max-height: 250px; /* Adjust this height based on your design */
+    overflow-y: auto;
+    scrollbar-width: thin; /* For Firefox */
+    padding-right: 5px; /* Prevents content from touching scrollbar */
+}
+
+/* Custom scrollbar styling for webkit browsers (Chrome, Safari, etc.) */
+.skill-list-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.skill-list-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.skill-list-container::-webkit-scrollbar-thumb {
+    background: #1DB954; /* Spotify green */
+    border-radius: 10px;
+}
+
+.skill-list-container::-webkit-scrollbar-thumb:hover {
+    background: #1ed760;
+}
+
+/* Education involvement styles */
+.involvement {
+    margin-top: 10px;
+}
+
+.involvement h4 {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.involvement ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.involvement li {
+    font-size: 0.85em;
+    margin-bottom: 3px;
+}
+
+/* Add these styles to your About.css file */
+
+/* Apply Spotify scrollbar styling to the entire page */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--spotify-green) var(--scrollbar-background);
+}
+
+/* For Webkit browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-background);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--spotify-green);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--scrollbar-thumb-active);
+}
+
+/* For elements with specific scrollbars */
+.spotify-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--spotify-green) var(--scrollbar-background);
+}
+
+/* Progress bar styling to match Spotify aesthetic */
+.progress-bar {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background-color: var(--spotify-green);
+    height: 8px;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* Optional: Adjust other elements to match Spotify's aesthetics */
+.tech-tag {
+    background-color: rgba(29, 185, 84, 0.15); /* Semi-transparent Spotify green */
+    border: 1px solid var(--spotify-green);
+    color: var(--spotify-green);
+}
+
+.resume-link, .spotify-next-button, .nav-button {
+    background-color: var(--spotify-green);
+}
+
+.resume-link:hover, .spotify-next-button:hover, .nav-button:hover {
+    background-color: var(--scrollbar-thumb-hover);
+}
+
+/* Add these styles to your About.css file to style the skill icons */
+
+.skill-icon {
+    font-size: 2rem;
+    color: var(--spotify-green);
+    margin: 0 auto;
+    display: block;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.skill-item:hover .skill-icon {
+    transform: scale(1.2);
+    color: var(--scrollbar-thumb-hover);
+}
+
+/* Adjust the skill-logo container to properly center the icons */
+.skill-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+}
+
+/* Optional: Add a subtle background effect to the skill icons */
+.skill-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.skill-item:hover {
+    background-color: rgba(29, 185, 84, 0.1);
+}
+
+/* Ensure the skill level displays properly */
+.skill-level {
+    display: block;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 2px;
+}
+
+.skill-name {
+    font-weight: 500;
+}
+
+

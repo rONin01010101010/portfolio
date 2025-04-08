@@ -1,0 +1,338 @@
+/* Project.css - Isolated Spotify-inspired styling */
+
+/* ===== Variables - Spotify color palette (scoped to this file) ===== */
+.projects-container {
+    --spotify-green: #1DB954;
+    --spotify-light-green: #1ed760;
+    --spotify-dark-green: #1aa34a;
+    --spotify-black: #121212;
+    --spotify-dark-gray: #181818;
+    --spotify-gray: #282828;
+    --spotify-light-gray: #b3b3b3;
+    --spotify-white: #FFFFFF;
+    --card-radius: 8px;
+    --transition-speed: 0.3s;
+    --card-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    --card-shadow-hover: 0 12px 20px rgba(0, 0, 0, 0.3);
+
+    /* Main container styles */
+    background-color: var(--spotify-black);
+    min-height: 100vh;
+    color: var(--spotify-white);
+    padding: 40px 30px;
+    font-family: 'Circular', 'Helvetica Neue', Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* ===== Scrollbar styles specifically for project page ===== */
+.projects-container .spotify-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--spotify-green) var(--spotify-black);
+}
+
+/* ===== Green heading ===== */
+.main-heading {
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.spotify-heading {
+    color: var(--spotify-green);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.spotify-underline {
+    width: 100px;
+    height: 3px;
+    background-color: var(--spotify-green);
+    margin-bottom: 10px;
+}
+
+.spotify-green-text {
+    color: var(--spotify-green);
+    font-weight: 600;
+}
+
+/* ===== Projects List Grid ===== */
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px; /* Increased spacing between cards */
+    margin-bottom: 40px;
+    padding: 10px 0;
+}
+
+/* ===== Project Cards ===== */
+.project-card {
+    background-color: var(--spotify-dark-gray);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    transition: transform var(--transition-speed),
+    background-color var(--transition-speed),
+    box-shadow var(--transition-speed);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: var(--card-shadow);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background-color: var(--spotify-gray);
+    box-shadow: var(--card-shadow-hover);
+}
+
+/* ===== Project Image ===== */
+.project-image-container {
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-speed);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+/* ===== Project Info ===== */
+.project-card-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: auto;
+}
+
+.project-name {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    color: var(--spotify-white);
+    font-weight: 700;
+}
+
+.project-description {
+    color: var(--spotify-light-gray);
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* ===== Tech Bubbles ===== */
+.tech-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tech-bubble {
+    display: flex;
+    align-items: center;
+    background-color: rgba(29, 185, 84, 0.2);
+    border: 1px solid var(--spotify-green);
+    color: var(--spotify-green);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    margin-bottom: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tech-bubble:hover {
+    background-color: rgba(29, 185, 84, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Discord-specific tech bubble */
+.tech-bubble:has(svg[data-icon="discord"]) {
+    background-color: rgba(88, 101, 242, 0.2);
+    border-color: #5865F2;
+    color: #5865F2;
+}
+
+.tech-bubble:has(svg[data-icon="discord"]):hover {
+    background-color: rgba(88, 101, 242, 0.4);
+}
+
+.tech-icon {
+    margin-right: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.tech-icon svg {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+/* Make Discord logo specifically larger */
+.tech-icon svg[data-icon="discord"] {
+    width: 1.5em;
+    height: 1.5em;
+    color: #5865F2; /* Discord brand color */
+}
+
+/* ===== Project Links ===== */
+.project-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.github-link {
+    color: var(--spotify-white);
+    font-size: 2rem; /* Increased from 1.5rem */
+    transition: all var(--transition-speed);
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.github-link:hover {
+    color: var(--spotify-white);
+    background-color: var(--spotify-green);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(29, 185, 84, 0.5);
+}
+
+.github-icon {
+    vertical-align: middle;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+/* ===== Project Status ===== */
+.project-status {
+    background-color: var(--spotify-green);
+    color: var(--spotify-black);
+    padding: 4px 10px;
+    border-radius: 500px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.coming-soon .project-status {
+    background-color: var(--spotify-light-gray);
+    color: var(--spotify-black);
+}
+
+.coming-soon .project-name {
+    color: var(--spotify-light-gray);
+}
+
+.coming-soon {
+    opacity: 0.8;
+}
+
+/* ===== Footer ===== */
+.projects-footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--spotify-green);
+    color: var(--spotify-black);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    min-width: 120px;
+}
+
+.nav-button:hover {
+    background-color: var(--spotify-light-green);
+}
+
+.nav-button.prev i {
+    margin-right: 8px;
+}
+
+.nav-button.next i {
+    margin-left: 8px;
+}
+
+/* ===== Responsive adjustments ===== */
+@media (max-width: 992px) {
+    .projects-list {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .spotify-heading {
+        font-size: 2rem;
+    }
+
+    .projects-container {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-container {
+        padding: 20px 15px;
+    }
+
+    .projects-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tech-bubbles {
+        flex-wrap: wrap;
+    }
+
+    .navigation-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-button {
+        width: 100%;
+    }
+}
