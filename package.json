@@ -36,6 +36,8 @@
   "homepage": "https://ronin01010101010.github.io/portfolio/",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "build": "vite build",
+    "dev": "vite"
   }
 }
