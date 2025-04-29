@@ -8,12 +8,13 @@ import Tracklist from './Pages/tracklist.jsx'
 import {BrowserRouter} from "react-router-dom";
 //import About from './Pages/About.jsx';
 //import Project from './Pages/Project.jsx';
+import {HashRouter} from "react-router-dom";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <BrowserRouter>
+        <HashRouter>
             <App/>
-        </BrowserRouter>
-    </StrictMode>,
+        </HashRouter>
+    </StrictMode>
 );
 

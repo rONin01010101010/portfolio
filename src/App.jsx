@@ -1,13 +1,15 @@
 import { useState } from 'react'
-import {BrowserRouter as Router, Routes, Route, BrowserRouter} from 'react-router-dom';
+//import {BrowserRouter as Router, Routes, Route, BrowserRouter} from 'react-router-dom';
 import Home from './Pages/Home.jsx';
 import Tracklist from './Pages/tracklist.jsx'
 import Project from './Pages/Project.jsx'
 import About from "./Pages/About.jsx";
 import Contact from "./Pages/Contact.jsx";
+//import {Routes} from "react-router-dom";
+import {Link,Route, Routes} from 'react-router-dom'
 function App() {
     return (
-                <Routes>
+        <Routes>
                     <Route path="/" element={<Home/>} />
                     <Route path="/tracklist" element={<Tracklist/>} />
                     <Route path="/Project" element={<Project/>} />
@@ -15,9 +17,8 @@ function App() {
                     <Route path="/About" element={<About/>} />
                     <Route path="/Contact" element={<Contact/>} />
 
-                </Routes>
-
-    );
+        </Routes>
+);
 }
 
 export default App
