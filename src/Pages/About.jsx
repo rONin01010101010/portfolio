@@ -109,11 +109,11 @@ const About = () => {
 
     // Current project data
     const currentProject = {
-        name: "Spotify-Inspired Portfolio",
-        description: "A creative portfolio website using React that mimics Spotify's interface to showcase my projects and skills in an interactive way.",
-        technologies: ["React", "JavaScript", "CSS", "React Router"],
+        name: "Sleep Tracking app ",
+        description: "A sleep tracking app that monitors a user's sleep behaviour giving summaries based on weekly, monthly and yearly data with averages provided.",
+        technologies: ["React", "PHP", "CSS", "Laravel framework"],
         completion: "65%",
-        githubLink: "https://github.com/yourusername/spotify-portfolio"
+        githubLink: ""
     };
 
     // Spotify scrollbar style

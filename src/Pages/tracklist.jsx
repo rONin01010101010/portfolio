@@ -26,7 +26,7 @@ const TrackList = () => {
             link: "/Project"
         },
         {
-            id: 3 ,
+            id: 3,
             title: "Contact",
             duration: "1:58",
             content: "Get in touch for collaborations and opportunities",
@@ -38,6 +38,11 @@ const TrackList = () => {
     const handlePlayClick = () => {
         // Navigate to the About page
         navigate('/about');
+    };
+
+    // Function to handle track click navigation
+    const handleTrackClick = (link) => {
+        navigate(link);
     };
 
     return (
@@ -103,7 +108,21 @@ const TrackList = () => {
                         <li key={track.id} className="track-item" style={{ justifyContent: 'flex-start' }}>
                             <div className="track-number">{track.id}</div>
                             <div className="track-info">
-                                <a href={track.link} className="track-title-link">{track.title}</a>
+                                {/* Changed from <a> tag to button/span with onClick */}
+                                <button
+                                    className="track-title-link"
+                                    onClick={() => handleTrackClick(track.link)}
+                                    style={{
+                                        background: 'none',
+                                        border: 'none',
+                                        padding: '0',
+                                        color: 'inherit',
+                                        cursor: 'pointer',
+                                        textDecoration: 'underline'
+                                    }}
+                                >
+                                    {track.title}
+                                </button>
                                 <span className="track-content">{track.content}</span>
                             </div>
                             <div className="track-duration">{track.duration}</div>

@@ -135,27 +135,35 @@
     color: var(--spotify-gray);
     font-size: 14px;
     font-weight: 400;
-    padding-left: 1rem;
+    padding: 16px 0;
+    margin-bottom: 8px;
+}
+
+.tracks-header .track-number,
+.tracks-header .track-title,
+.tracks-header .track-duration {
+    text-align: left;
 }
 
 .tracks-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    align-items: flex-start;
 }
 
 .track-item {
     display: grid;
     grid-template-columns: 48px 1fr 120px;
-    padding: 16px;
+    padding: 8px 0;
     border-radius: 4px;
     transition: background-color 0.2s ease;
-    justify-content: flex-start;
+    align-items: center;
 }
 
 .track-item:hover {
     background-color: var(--spotify-hover-bg);
+    padding: 8px 16px;
+    margin: 0 -16px;
 }
 
 .track-number {
@@ -163,11 +171,16 @@
     align-items: center;
     color: var(--spotify-gray);
     font-size: 16px;
+    text-align: left;
+    padding-left: 8px;
 }
 
 .track-info {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 16px;
 }
 
 .track-title-link {
@@ -177,6 +190,9 @@
     font-weight: 400;
     margin-bottom: 4px;
     transition: color 0.2s ease;
+    text-align: left;
+    display: block;
+    width: 100%;
 }
 
 .track-title-link:hover {
@@ -187,14 +203,18 @@
 .track-content {
     color: var(--spotify-gray);
     font-size: 14px;
+    text-align: left;
+    margin-top: 2px;
+    line-height: 1.4;
 }
 
 .track-duration {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     color: var(--spotify-gray);
     font-size: 14px;
+    text-align: left;
 }
 
 /* Media Queries */
@@ -226,6 +246,14 @@
     .track-duration {
         font-size: 12px;
     }
+
+    .track-info {
+        padding-left: 8px;
+    }
+
+    .track-number {
+        padding-left: 4px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -244,6 +272,16 @@
 
     .track-item {
         padding: 12px 8px;
+    }
+
+    /* On mobile, still keep left alignment */
+    .album-info {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .artist-info {
+        justify-content: flex-start;
     }
 }
 
@@ -276,7 +314,4 @@
     color: rgba(255, 255, 255, 0.9);
 }
 
-.github-link:hover .github-username {
-    color: #1DB954; /* Spotify green on hover */
-    text-decoration: underline;
-}
+.github
