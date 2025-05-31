@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './trackList.css';
+import './css/tracklist.css';
 // Import your own image below
 import Ippo from '../assets/Ippo.jpg';
 import logo from '../assets/GitHub logo - Copy.png';
