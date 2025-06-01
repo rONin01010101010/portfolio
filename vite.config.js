@@ -13,8 +13,14 @@ export default defineConfig({
       output: {
         manualChunks: {
           // Group pages together
-          pages: ['src/Pages/tracklist.jsx', 'src/Pages/Home.jsx', "src/Pages/About.jsx", 'src/Pages/Contact.jsx','src/Pages/Project.jsx'],
-          // Keep vendor libraries separate
+          pages: [
+            'src/Pages/tracklist.jsx',
+            'src/Pages/Home.jsx',
+            'src/Pages/About.jsx',
+            'src/Pages/Contact.jsx',
+            'src/Pages/Project.jsx'
+          ],
+          // Keep vendor libraries separate (removed duplicates)
           vendor: ['react', 'react-dom', 'react-router-dom']
         },
         entryFileNames: 'js/[name].[hash].js',
@@ -25,7 +31,9 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    host: true
+    host: true,
+    // Add MIME type headers for dev server
+    middlewareMode: false
   },
   preview: {
     port: 4173,
