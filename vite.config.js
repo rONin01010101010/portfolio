@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
+let process;
 export default defineConfig({
   plugins: [react()],
   base: "/",
@@ -9,22 +10,13 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
+    target: 'es2015', // Better browser compatibility
     rollupOptions: {
       output: {
-        manualChunks: {
-          // Group pages together
-          pages: [
-            'src/Pages/tracklist.jsx',
-            'src/Pages/Home.jsx',
-            'src/Pages/About.jsx',
-            'src/Pages/Contact.jsx',
-            'src/Pages/Project.jsx'
-          ],
-          // Keep vendor libraries separate (removed duplicates)
-          vendor: ['react', 'react-dom', 'react-router-dom']
-        },
-        entryFileNames: 'js/[name].[hash].js',
-        chunkFileNames: 'js/[name].[hash].js',
+        // Simplified chunking to avoid module loading issues
+        manualChunks: undefined,
+        entryFileNames: 'assets/[name].[hash].js',
+        chunkFileNames: 'assets/[name].[hash].js',
         assetFileNames: 'assets/[name].[hash].[ext]'
       }
     }
@@ -32,11 +24,17 @@ export default defineConfig({
   server: {
     port: 3000,
     host: true,
-    // Add MIME type headers for dev server
-    middlewareMode: false
+    // Add explicit MIME types for dev server
+    fs: {
+      strict: false
+    }
   },
   preview: {
     port: 4173,
     host: true
+  },
+  // Explicitly define file types
+  define: {
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
   }
 })
