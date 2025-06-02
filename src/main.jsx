@@ -10,11 +10,42 @@ import App from "./App.jsx";
 // //import Project from './Pages/Project.jsx';
 import {BrowserRouter, HashRouter} from "react-router-dom";
 
-createRoot(document.getElementById('root')).render(
-    <StrictMode>
-        <BrowserRouter>
-            <App/>
-        </BrowserRouter>
-    </StrictMode>
-);
+console.log('Main.jsx loaded');
+
+try {
+    const rootElement = document.getElementById('root');
+
+    if (!rootElement) {
+        throw new Error('Root element not found');
+    }
+
+    console.log('Root element found, creating React app...');
+
+    const root = createRoot(rootElement);
+
+    root.render(
+        <StrictMode>
+            <HashRouter>
+                <App />
+            </HashRouter>
+        </StrictMode>
+    );
+
+    console.log('React app rendered successfully');
+
+} catch (error) {
+    console.error('Error mounting React app:', error);
+
+    // Fallback: show error message in HTML
+    const rootElement = document.getElementById('root');
+    if (rootElement) {
+        rootElement.innerHTML = `
+      <div style="padding: 20px; color: red; font-family: Arial;">
+        <h1>React App Failed to Load</h1>
+        <p>Error: ${error.message}</p>
+        <p>Check the browser console for more details.</p>
+      </div>
+    `;
+    }
+}
 

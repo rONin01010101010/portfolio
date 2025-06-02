@@ -5,10 +5,23 @@
     <link rel="icon" type="image/svg+xml" href="./src/assets/actvedev.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KENANDEV</title>
+    <script>
+      // Debug script to check if page loads
+      console.log('HTML loaded successfully');
+      window.addEventListener('DOMContentLoaded', () => {
+        console.log('DOM loaded');
+        const root = document.getElementById('root');
+        if (!root) {
+          console.error('Root element not found!');
+        } else {
+          console.log('Root element found');
+        }
+      });
+    </script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" />
   </head>
   <body>
     <div id="root"></div>
-    <script type="text/jsx" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

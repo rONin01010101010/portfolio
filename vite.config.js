@@ -1,34 +1,16 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/",
+  base: '/',
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: false,
-    target: 'es2015',
+    sourcemap: true, // Enable for debugging
     rollupOptions: {
       output: {
-        manualChunks: undefined,
-        entryFileNames: 'assets/[name].[hash].js',
-        chunkFileNames: 'assets/[name].[hash].js',
-        assetFileNames: 'assets/[name].[hash].[ext]'
+        manualChunks: undefined // Remove all chunking
       }
     }
-  },
-  server: {
-    port: 3000,
-    host: true,
-    fs: {
-      strict: false
-    }
-  },
-  preview: {
-    port: 4173,
-    host: true
   }
-  // Removed the problematic define section
 })
