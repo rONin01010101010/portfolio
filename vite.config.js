@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/kenan-portfolio',
   build: {
     outDir: 'dist',
     sourcemap: true, // Enable for debugging
