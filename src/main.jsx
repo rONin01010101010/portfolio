@@ -1,4 +1,5 @@
 import { StrictMode } from 'react';
+import ErrorBoundary from './ErrorBoundary.jsx';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from "./App.jsx";
@@ -25,9 +26,11 @@ try {
 
     root.render(
         <StrictMode>
-            <HashRouter>
-                <App />
-            </HashRouter>
+            <ErrorBoundary>
+                <HashRouter>
+                    <App />
+                </HashRouter>
+            </ErrorBoundary>
         </StrictMode>
     );
 
