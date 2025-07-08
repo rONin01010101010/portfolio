@@ -9,7 +9,7 @@ import App from "./App.jsx";
 // import {BrowserRouter} from "react-router-dom";
 // //import About from './Pages/About.jsx';
 // //import Project from './Pages/Project.jsx';
-import {BrowserRouter, HashRouter} from "react-router-dom";
+import { HashRouter} from "react-router-dom";
 
 console.log('Main.jsx loaded');
 
