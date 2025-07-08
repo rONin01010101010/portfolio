@@ -10,18 +10,17 @@
     --spotify-gray: #282828;
     --spotify-light-gray: #b3b3b3;
     --spotify-white: #FFFFFF;
-    --card-radius: 8px;
+    --card-radius: 16px;
     --transition-speed: 0.3s;
     --card-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    --card-shadow-hover: 0 12px 20px rgba(0, 0, 0, 0.3);
 
     /* Main container styles */
     background-color: var(--spotify-black);
     min-height: 100vh;
     color: var(--spotify-white);
-    padding: 40px 30px;
+    padding: 40px;
     font-family: 'Circular', 'Helvetica Neue', Arial, sans-serif;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -59,11 +58,11 @@
     font-weight: 600;
 }
 
-/* ===== Projects List Grid ===== */
+/* ===== Projects List Grid - 3 columns ===== */
 .projects-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px; /* Increased spacing between cards */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     margin-bottom: 40px;
     padding: 10px 0;
 }
@@ -73,9 +72,6 @@
     background-color: var(--spotify-dark-gray);
     border-radius: var(--card-radius);
     overflow: hidden;
-    transition: transform var(--transition-speed),
-    background-color var(--transition-speed),
-    box-shadow var(--transition-speed);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -84,28 +80,18 @@
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    background-color: var(--spotify-gray);
-    box-shadow: var(--card-shadow-hover);
-}
-
 /* ===== Project Image ===== */
 .project-image-container {
     height: 180px;
     overflow: hidden;
     position: relative;
+    border-radius: var(--card-radius) var(--card-radius) 0 0;
 }
 
 .project-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform var(--transition-speed);
-}
-
-.project-card:hover .project-image {
-    transform: scale(1.05);
 }
 
 /* ===== Project Info ===== */
@@ -150,15 +136,8 @@
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 500;
-    transition: all 0.2s ease;
     margin-bottom: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.tech-bubble:hover {
-    background-color: rgba(29, 185, 84, 0.4);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Discord-specific tech bubble */
@@ -166,10 +145,6 @@
     background-color: rgba(88, 101, 242, 0.2);
     border-color: #5865F2;
     color: #5865F2;
-}
-
-.tech-bubble:has(svg[data-icon="discord"]):hover {
-    background-color: rgba(88, 101, 242, 0.4);
 }
 
 .tech-icon {
@@ -202,13 +177,13 @@
 
 .github-link {
     color: var(--spotify-white);
-    font-size: 2rem; /* Increased from 1.5rem */
-    transition: all var(--transition-speed);
+    font-size: 2rem;
     display: flex;
     align-items: center;
     padding: 8px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
+    transition: all var(--transition-speed);
 }
 
 .github-link:hover {
@@ -291,16 +266,30 @@
 }
 
 /* ===== Responsive adjustments ===== */
+@media (max-width: 1200px) {
+    .projects-container {
+        padding: 40px 30px;
+    }
+}
+
 @media (max-width: 992px) {
+    .projects-container {
+        padding: 40px 25px;
+    }
+    
     .projects-list {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
 }
 
 @media (max-width: 768px) {
+    .projects-container {
+        padding: 30px 20px;
+    }
+
     .projects-list {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
 
@@ -308,12 +297,16 @@
         font-size: 2rem;
     }
 
-    .projects-container {
-        padding: 30px 20px;
+    .project-card-info {
+        padding: 15px;
+    }
+
+    .project-image-container {
+        height: 150px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
     .projects-container {
         padding: 20px 15px;
     }
@@ -334,5 +327,27 @@
 
     .nav-button {
         width: 100%;
+    }
+
+    .project-name {
+        font-size: 1.2rem;
+    }
+
+    .project-description {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .projects-container {
+        padding: 15px 10px;
+    }
+
+    .project-card-info {
+        padding: 12px;
+    }
+
+    .project-image-container {
+        height: 140px;
     }
 }
