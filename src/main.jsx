@@ -27,9 +27,9 @@ try {
     root.render(
         <StrictMode>
             <ErrorBoundary>
-                <BrowserRouter>
+                <HashRouter>
                     <App />
-                </BrowserRouter>
+                </HashRouter>
             </ErrorBoundary>
         </StrictMode>
     );
