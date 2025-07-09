@@ -1,8 +1,6 @@
 services:
   - type: web
     name: Portfolio-App
-    env: static
-    region: Toronto
     buildCommand: npm ci && npm run build
     staticPublishPath: ./dist
 
