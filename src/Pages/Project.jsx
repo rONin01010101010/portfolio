@@ -58,7 +58,7 @@ const projects = [
         id: 3,
         name: "Gomoku AI game",
         description: "Gomoku AI game implemented with minimax algorithm",
-        repo: "https://github.com/yourusername/project-gamma",
+        repo: "https://github.com/rONin01010101010/COMP2080",
         demo: "",
         status: "Completed",
         image: Gomoku,
