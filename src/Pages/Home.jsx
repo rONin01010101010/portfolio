@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
 // Import your own image below
- import Ippo from '../assets/Ippo.jpg';
+import ProfilePhoto from '../assets/ProfilePhoto.jpg';
 const Home = () => {
     const [isHovered, setIsHovered] = useState(false);
     const navigate = useNavigate();
@@ -23,7 +23,7 @@ const Home = () => {
                 >
 
                     <img
-                        src={Ippo}
+                        src={ProfilePhoto}
                         alt="Portfolio Cover"
                         className="album-cover"
                     />

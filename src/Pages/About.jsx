@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './About.css'; // For styling
-import Ippo from '../assets/Ippo.jpg'; // Main image
+import ProfilePhoto from '../assets/ProfilePhoto.jpg'; // Main image
 import { FaDownload } from 'react-icons/fa'; // Added download icon
 import Kenan_Resume from '../assets/KENAN_ODONGOSOFTWAREDEV.pdf'
 import {
@@ -59,7 +59,7 @@ const About = () => {
         document.body.removeChild(link);
     };
 
-    const images = [Ippo];
+    const images = [ProfilePhoto];
 
     const handlePrevImage = () => {
         setCurrentImageIndex((prevIndex) =>
@@ -128,7 +128,7 @@ const About = () => {
         <div className="spotify-about-container" style={scrollbarStyle}>
             {/* Profile Image Circle at Top */}
             <div className="profile-image-container">
-                <img src={Ippo} alt="Profile" className="profile-image-circle"/>
+                <img src={ProfilePhoto} alt="Profile" className="profile-image-circle"/>
                 <h1 className="profile-name">Kenan Odongo</h1>
             </div>
 
