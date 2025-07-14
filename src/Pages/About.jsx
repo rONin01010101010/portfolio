@@ -3,7 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import './About.css'; // For styling
 import ProfilePhoto from '../assets/ProfilePhoto.jpg'; // Main image
 import { FaDownload } from 'react-icons/fa'; // Added download icon
-import Kenan_Resume from '../assets/KENAN_ODONGOSOFTWAREDEV.pdf'
+import SoftwareDev from '../assets/SoftwareDevResume.pdf';
+
 import {
     FaJs,
     FaReact,
@@ -44,10 +45,10 @@ const About = () => {
 
         // Set the href to the path of your resume file
         // Assuming your resume is stored in the public folder as "Kenan_Odongo_Resume.pdf"
-        link.href = Kenan_Resume;
+        link.href = SoftwareDev;
 
         // Set the download attribute to suggest filename to the browser
-        link.download = Kenan_Resume;
+        link.download = SoftwareDev;
 
         // Append to the document body
         document.body.appendChild(link);
@@ -145,7 +146,7 @@ const About = () => {
                         className="resume-link"
                         onClick={handleResumeDownload}
                     >
-                        <FaDownload className="download-icon" /> Download Resume
+                        <FaDownload className="download-icon" /> View Resume
                     </a>
                 </div>
             </div>
