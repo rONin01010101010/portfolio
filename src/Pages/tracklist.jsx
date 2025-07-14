@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FaGithub } from 'react-icons/fa';
 import './css/tracklist.css';
 // Import your own image below
 import Ippo from '../assets/Ippo.jpg';
-import logo from '../assets/GitHub logo - Copy.png';
 
 const TrackList = () => {
     // Use the navigate hook from react-router-dom
@@ -65,10 +65,13 @@ const TrackList = () => {
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center' }}>
                                 <a href="https://github.com/rONin01010101010" target="_blank" rel="noopener noreferrer">
-                                    <img
-                                        src={logo}
-                                        alt="GitHub"
-                                        style={{ width: '40px', height: '40px', marginRight: '10px' }}
+                                    <FaGithub
+                                        style={{ 
+                                            width: '40px', 
+                                            height: '40px', 
+                                            marginRight: '10px',
+                                            color: '#1db954'
+                                        }}
                                     />
                                 </a>
                                 <span className="artist-name">Kenan Odongo</span>
