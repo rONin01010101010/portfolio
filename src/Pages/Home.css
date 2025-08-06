@@ -141,3 +141,107 @@ body {
         font-size: 24px;
     }
 }
+
+/* Add these styles to your existing Home.css file */
+
+.album-container {
+    position: relative;
+    display: inline-block;
+}
+
+.play-button-container-fixed {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    z-index: 10;
+}
+
+.play-button-fixed {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #1ed760; /* Spotify green */
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    color: black;
+}
+
+.play-button-fixed:hover {
+    background-color: #1fdf64;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.play-button-fixed:active {
+    transform: scale(0.95);
+} 
+
+/* Add these styles to your existing Home.css file */
+
+.album-container {
+    position: relative;
+    display: inline-block;
+}
+
+.play-button-container-fixed {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    z-index: 10;
+}
+
+.play-button-fixed {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--spotify-green);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    color: var(--spotify-black);
+}
+
+.play-button-fixed:hover {
+    background-color: #1fdf64;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.play-button-fixed:active {
+    transform: scale(0.95);
+}
+
+/* Updated styles for portfolio title and instruction */
+.portfolio-title {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--spotify-gray);
+    margin: 8px 0 0;
+}
+
+.play-instruction {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--spotify-gray);
+    margin-top: 8px;
+}
+
+/* Media Queries for mobile */
+@media (max-width: 480px) {
+    .portfolio-title {
+        font-size: 24px;
+    }
+}
